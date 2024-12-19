@@ -1,0 +1,90 @@
+ /* bootstrapを使用しないで表示するにはどのようにcssの書き方すればいいか教えて */
+
+ .title {
+    font-family: cursive;
+  }
+  
+  .sub-title {
+    font-family: serif;
+  }
+  
+  .cover {
+    height: 100%;
+    width: 100%;
+    display: table;
+    background-image: url(/assets/top-scaled.jpg);
+    background-color:rgba(255,255,255,0.4);
+    background-blend-mode:lighten;
+    background-size: 100% 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+
+/* 中央テキストのスタイリング */
+.text-center {
+  text-align: center;
+}
+
+/* サブタイトル */
+.sub-title {
+  font-size: 18px;
+  color: #6c757d; /* グレー */
+  margin-bottom: 10px;
+}
+
+/* タイトル */
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #343a40; /* 濃いグレー */
+  margin-bottom: 20px;
+}
+
+/* ボタンの共通スタイル */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; /* 角を丸くする */
+  cursor: pointer;
+  border: none; /* ボーダーを削除 */
+}
+
+/* 新規登録ボタン（青） */
+.btn-primary {
+  background-color: #007bff; /* 青 */
+  color: #fff; /* 白文字 */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* ホバー時の色 */
+}
+
+/* ログインボタン（緑） */
+.btn-success {
+  background-color: #28a745; /* 緑 */
+  color: #fff; /* 白文字 */
+}
+
+.btn-success:hover {
+  background-color: #1e7e34; /* ホバー時の色 */
+}
+
+/* ボタン間のスペース */
+.mr-2 {
+  margin-right: 10px;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}

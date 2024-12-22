@@ -1,0 +1,122 @@
+h1 {
+    font-family: serif;
+    font-weight: normal;
+    /* 太字を解除 */
+    text-align: center;
+    /* 中央揃え */
+  }
+  
+  .cover-new {
+    height: 100%;
+    /* ビューポートの高さに合わせる */
+    width: 100%;
+    /* 横幅いっぱい */
+    background-image: url('/assets/new-scaled.jpg');
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    /* 画像と色の合成 */
+    background-size: cover;
+    /* 画像を全体にカバー */
+    background-position: center;
+    /* 中央揃え */
+    display: flex;
+    /* コンテンツを中央揃えするためにflexboxを使用 */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* 全体の余白 */
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    /* 行を折り返す */
+    justify-content: center;
+    /* 中央揃え */
+    width: 100%;
+    /* 横幅を全体に広げる */
+    margin-top: 20px;
+    /* 上部余白（mt-5相当） */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+     /* 下部余白 (mb-3相当) */
+    width: 100%;
+     /* 横幅いっぱい */
+    max-width: 600px;
+     /* 最大幅を設定 */
+  }
+  
+  .form-label {
+    font-size: 20px;
+    /* ラベルのフォントサイズ */
+    display: block;
+    /* ラベルをブロック要素にして改行 */
+    margin-bottom: 5px;
+    /* ラベルと入力フィールドの間に余白 */
+  }
+  
+  .form-control {
+    width: 100%;
+     /* 横幅いっぱい */
+    padding: 10px;
+     /* 内側余白 */
+    font-size: 16px;
+    /* フォントサイズ */
+    border: 1px solid #ccc;
+     /* 枠線 */
+    border-radius: 4px;
+    /* 角を少し丸く */
+    box-sizing: border-box;
+    /* パディングを含むサイズ */
+  }
+  
+  textarea.form-control {
+    resize: vertical;
+    /* 高さのみ変更可能 */
+  }
+  
+  input[type="file"] {
+    font-size: 16px;
+     /* ファイル選択ボタンのフォントサイズ */
+  }
+  
+  .btn {
+    display: inline-block;
+     /* インラインブロックで配置 */
+    padding: 10px 20px;
+    /* 内側余白 */
+    font-size: 16px;
+    /* フォントサイズ */
+    font-weight: bold;
+     /* フォントの太さ */
+    color: #fff;
+    /* テキストカラー */
+    text-align: center;
+    /* 中央揃え */
+    text-decoration: none;
+    /* テキストの下線を消す */
+    border: none;
+    /* ボーダーを削除 */
+    border-radius: 4px;
+    /* 角を丸くする */
+    cursor: pointer;
+    /* ポインタを表示 */
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    transition: background-color 0.3s;
+     /* ホバー時のアニメーション */
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }

@@ -4,6 +4,8 @@ h1 {
     /* 太字を解除 */
     text-align: center;
     /* 中央揃え */
+    font-size: 32px;
+    margin-bottom: 20px;
   }
   
   .cover-new {
@@ -15,8 +17,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
     /* 画像と色の合成 */
-    background-size: cover;
-    /* 画像を全体にカバー */
+    background-size: 100% 100%;
     background-position: center;
     /* 中央揃え */
     display: flex;
@@ -43,6 +44,12 @@ h1 {
     /* 横幅を全体に広げる */
     margin-top: 20px;
     /* 上部余白（mt-5相当） */
+    width: 100%;
+     /* 親要素の幅いっぱい */
+    margin-top: 20px;
+     /* 上部の余白 (mt-5相当) */
+    flex-wrap: wrap;
+    /* 折り返しを有効化 */
   }
   
   .form-group {
@@ -120,3 +127,53 @@ h1 {
   .btn-success:hover {
     background-color: #218838;
   }
+
+  .cover-index {
+    height: 100%;
+    /* ビューポート全体の高さ */
+    width: 100%;
+    background-image: url(/assets/index-scaled.jpg);
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+  
+  .one-post {
+    width: 300px;
+    margin: 10px;
+    /* カード間の余白 */
+    text-align: center;
+    /* テキストを中央揃え */
+    border-radius: 5px;
+     /* 角を少し丸く */
+    overflow: hidden;
+     /* 内容のオーバーフローを隠す */
+    padding: 10px;
+    /* 内側余白 */
+  }
+  
+  .one-post img:hover {
+    width: 100%;
+    /* 画像をカードの幅に合わせる */
+    height: auto;
+     /* アスペクト比を維持 */
+    border-radius: 3px;
+    /* 画像の角を少し丸く */
+  }
+  
+  .one-post .caption {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .one-post {
+      width: 90%;
+      /* スマホ画面では幅を縮小 */
+    }
+}
+  

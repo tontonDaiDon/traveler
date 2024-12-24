@@ -1,7 +1,5 @@
 h1 {
     font-family: serif;
-    font-weight: normal;
-    /* 太字を解除 */
     text-align: center;
     /* 中央揃え */
     font-size: 32px;
@@ -29,10 +27,10 @@ h1 {
   .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
     /* 全体の余白 */
-  }
+    }
   
   .row {
     display: flex;
@@ -42,11 +40,11 @@ h1 {
     /* 中央揃え */
     width: 100%;
     /* 横幅を全体に広げる */
-    margin-top: 20px;
+    margin-top: 40px;
     /* 上部余白（mt-5相当） */
     width: 100%;
      /* 親要素の幅いっぱい */
-    margin-top: 20px;
+    margin-top: 30px;
      /* 上部の余白 (mt-5相当) */
     flex-wrap: wrap;
     /* 折り返しを有効化 */
@@ -116,6 +114,9 @@ h1 {
     /* 角を丸くする */
     cursor: pointer;
     /* ポインタを表示 */
+    margin: 0.5rem 0.5rem 0 0;
+    border: none;
+    cursor: pointer;
   }
   
   .btn-success {
@@ -129,7 +130,7 @@ h1 {
   }
 
   .cover-index {
-    height: 100%;
+    height: 140%;
     /* ビューポート全体の高さ */
     width: 100%;
     background-image: url(/assets/index-scaled.jpg);
@@ -143,10 +144,9 @@ h1 {
   
   .one-post {
     width: 300px;
-    margin: 10px;
+    margin: 20px;
     /* カード間の余白 */
-    text-align: center;
-    /* テキストを中央揃え */
+    text-align: left;
     border-radius: 5px;
      /* 角を少し丸く */
     overflow: hidden;
@@ -162,18 +162,89 @@ h1 {
      /* アスペクト比を維持 */
     border-radius: 3px;
     /* 画像の角を少し丸く */
-  }
+    transform: scale(1.2,1.2);
+    flex-direction: row;
+    text-align: center;
+    }
   
   .one-post .caption {
     font-size: 16px;
-    color: #555;
+    color: #000000;
     margin-top: 10px;
+    align-items: center;
+  }
+
+  .index-left {
+    margin-left: 2.5rem!important;
   }
   
-  @media (max-width: 768px) {
-    .one-post {
-      width: 90%;
-      /* スマホ画面では幅を縮小 */
-    }
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: #555;
 }
-  
+
+.cover-show {
+  height: 120%;
+  width: 100%;
+  background-image: url(/assets/show-scaled.jpg);
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-size: 120% 120%;
+}
+
+/* 画像のスタイル */
+img {
+  width: 60%; /* 画面幅の100%以内に収める */
+  height: 60%; /* ビューポート高さ（画面高さ）以内に収める */
+  height: auto; /* 縦横比を維持して高さを自動調整 */
+  display: block;
+  margin: center; /* 中央寄せ */
+  object-fit: contain; /* 画像が切れないように調整 */ 
+  border-radius: 8px; /* 角を丸める */
+}
+
+/* テキストのスタイル */
+#text {
+  font-size: 18px;
+  margin-top: 1rem;
+  color: #000000;
+  line-height: 1.8;
+  text-align: left;
+}
+
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9; 
+  /* ホバー時のエフェクト */
+}
+
+/* 全体の中央寄せ用スタイル */
+.d-block {
+  max-width: 600px;
+  margin: 0 auto; /* 横方向の中央寄せ */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .one-post {
+    width: 90%;
+    /* スマホ画面では幅を縮小 */
+  }
+}

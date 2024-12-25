@@ -1,218 +1,179 @@
 h1 {
-    font-family: serif;
-    text-align: center;
-    /* 中央揃え */
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .cover-new {
-    height: 100%;
-    /* ビューポートの高さに合わせる */
-    width: 100%;
-    /* 横幅いっぱい */
-    background-image: url('/assets/new-scaled.jpg');
-    background-color: rgba(255, 255, 255, 0.4);
-    background-blend-mode: lighten;
-    /* 画像と色の合成 */
-    background-size: 100% 100%;
-    background-position: center;
-    /* 中央揃え */
-    display: flex;
-    /* コンテンツを中央揃えするためにflexboxを使用 */
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    /* 全体の余白 */
-    }
-  
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    /* 行を折り返す */
-    justify-content: center;
-    /* 中央揃え */
-    width: 100%;
-    /* 横幅を全体に広げる */
-    margin-top: 40px;
-    /* 上部余白（mt-5相当） */
-    width: 100%;
-     /* 親要素の幅いっぱい */
-    margin-top: 30px;
-     /* 上部の余白 (mt-5相当) */
-    flex-wrap: wrap;
-    /* 折り返しを有効化 */
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-     /* 下部余白 (mb-3相当) */
-    width: 100%;
-     /* 横幅いっぱい */
-    max-width: 600px;
-     /* 最大幅を設定 */
-  }
-  
-  .form-label {
-    font-size: 20px;
-    /* ラベルのフォントサイズ */
-    display: block;
-    /* ラベルをブロック要素にして改行 */
-    margin-bottom: 5px;
-    /* ラベルと入力フィールドの間に余白 */
-  }
-  
-  .form-control {
-    width: 100%;
-     /* 横幅いっぱい */
-    padding: 10px;
-     /* 内側余白 */
-    font-size: 16px;
-    /* フォントサイズ */
-    border: 1px solid #ccc;
-     /* 枠線 */
-    border-radius: 4px;
-    /* 角を少し丸く */
-    box-sizing: border-box;
-    /* パディングを含むサイズ */
-  }
-  
-  textarea.form-control {
-    resize: vertical;
-    /* 高さのみ変更可能 */
-  }
-  
-  input[type="file"] {
-    font-size: 16px;
-     /* ファイル選択ボタンのフォントサイズ */
-  }
-  
-  .btn {
-    display: inline-block;
-     /* インラインブロックで配置 */
-    padding: 10px 20px;
-    /* 内側余白 */
-    font-size: 16px;
-    /* フォントサイズ */
-    font-weight: bold;
-     /* フォントの太さ */
-    color: #fff;
-    /* テキストカラー */
-    text-align: center;
-    /* 中央揃え */
-    text-decoration: none;
-    /* テキストの下線を消す */
-    border: none;
-    /* ボーダーを削除 */
-    border-radius: 4px;
-    /* 角を丸くする */
-    cursor: pointer;
-    /* ポインタを表示 */
-    margin: 0.5rem 0.5rem 0 0;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn-success {
-    background-color: #28a745;
-    transition: background-color 0.3s;
-     /* ホバー時のアニメーション */
-  }
-  
-  .btn-success:hover {
-    background-color: #218838;
-  }
+  font-family: serif;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
 
-  .cover-index {
-    height: 140%;
-    /* ビューポート全体の高さ */
-    width: 100%;
-    background-image: url(/assets/index-scaled.jpg);
-    background-color: rgba(255, 255, 255, 0.4);
-    background-blend-mode: lighten;
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }  
-  
-  .one-post {
-    width: 300px;
-    margin: 20px;
-    /* カード間の余白 */
-    text-align: left;
-    border-radius: 5px;
-     /* 角を少し丸く */
-    overflow: hidden;
-     /* 内容のオーバーフローを隠す */
-    padding: 10px;
-    /* 内側余白 */
-  }
-  
-  .one-post img:hover {
-    width: 100%;
-    /* 画像をカードの幅に合わせる */
-    height: auto;
-     /* アスペクト比を維持 */
-    border-radius: 3px;
-    /* 画像の角を少し丸く */
-    transform: scale(1.2,1.2);
-    flex-direction: row;
-    text-align: center;
-    }
-  
-  .one-post .caption {
-    font-size: 16px;
-    color: #000000;
-    margin-top: 10px;
-    align-items: center;
-  }
+.cover-index {
+  height: 140%;
+  width: 100%;
+  background-image: url('/assets/index-scaled.jpg');
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .index-left {
-    margin-left: 2.5rem!important;
-  }
-  
-h2 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  color: #555;
+.cover-new,
+.cover-show,
+.cover-edit {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-new {
+  background-image: url('/assets/new-scaled.jpg');
+  background-position: center;
 }
 
 .cover-show {
-  height: 120%;
-  width: 100%;
-  background-image: url(/assets/show-scaled.jpg);
-  background-color: rgba(255, 255, 255, 0.4);
-  background-blend-mode: lighten;
+  background-image: url('/assets/show-scaled.jpg');
   background-size: 120% 120%;
+  height: 120%
 }
 
-/* 画像のスタイル */
-img {
-  width: 60%; /* 画面幅の100%以内に収める */
-  height: 60%; /* ビューポート高さ（画面高さ）以内に収める */
-  height: auto; /* 縦横比を維持して高さを自動調整 */
-  display: block;
-  margin: center; /* 中央寄せ */
-  object-fit: contain; /* 画像が切れないように調整 */ 
-  border-radius: 8px; /* 角を丸める */
+.cover-edit {
+  background-image: url('/assets/edit-scaled.jpg');
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* テキストのスタイル */
-#text {
-  font-size: 18px;
-  margin-top: 1rem;
-  color: #000000;
-  line-height: 1.8;
+.cover-edit h1 {
+  font-size: 1.8rem;
   text-align: left;
+  margin-bottom: 2rem;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.one-post {
+  width: 300px;
+  margin: 20px;
+  /* カード間の余白 */
+  text-align: left;
+  border-radius: 5px;
+     /* 角を少し丸く */
+  overflow: hidden;
+     /* 内容のオーバーフローを隠す */
+  padding: 10px;
+    /* 内側余白 */
+}
+
+.one-post img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+
+.one-post img:hover {
+  transform: scale(1.2);
+}
+
+.one-post .caption {
+  font-size: 16px;
+  color: #000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+input[type="file"] {
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+   /* インラインブロックで配置 */
+  padding: 10px 20px;
+  /* 内側余白 */
+  font-size: 16px;
+  /* フォントサイズ */
+  font-weight: bold;
+   /* フォントの太さ */
+  color: #fff;
+  /* テキストカラー */
+  text-align: center;
+  /* 中央揃え */
+  text-decoration: none;
+  /* テキストの下線を消す */
+  border: none;
+  /* ボーダーを削除 */
+  border-radius: 4px;
+  /* 角を丸くする */
+  cursor: pointer;
+  /* ポインタを表示 */
+  margin: 0.5rem 0.5rem 0 0;
+  border: none;
+  cursor: pointer;
+}
+
+button.btn-success {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+button.btn-success:hover {
+  background-color: #218838;
+}
 
 .btn-info {
   background-color: #17a2b8;
@@ -229,9 +190,32 @@ img {
   color: white;
 }
 
-.btn:hover {
-  opacity: 0.9; 
-  /* ホバー時のエフェクト */
+.btn-dark:hover {
+  background-color: #23272b;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+#text {
+  font-size: 18px;
+  margin-top: 1rem;
+  color: #000;
+  line-height: 1.8;
+  text-align: left;
 }
 
 /* 全体の中央寄せ用スタイル */
@@ -240,11 +224,14 @@ img {
   margin: 0 auto; /* 横方向の中央寄せ */
   padding: 1rem;
   border-radius: 8px;
-}
+  }
+
+.index-left {
+    margin-left: 2.5rem!important;
+  }
 
 @media (max-width: 768px) {
   .one-post {
     width: 90%;
-    /* スマホ画面では幅を縮小 */
   }
 }

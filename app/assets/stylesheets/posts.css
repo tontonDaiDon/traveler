@@ -24,7 +24,7 @@ h1 {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
-  background-size: 100% 100%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,8 +37,8 @@ h1 {
 
 .cover-show {
   background-image: url('/assets/show-scaled.jpg');
-  background-size: 120% 120%;
-  height: 120%
+  background-size: cover;
+  background-position: center,
 }
 
 .cover-edit {
@@ -56,11 +56,19 @@ h1 {
 }
 
 .container {
+  max-width: 80%; /* コンテンツの最大幅を設定 */
+  margin: 0 auto; /* 横方向の中央寄せ */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* 背景色と透明度を設定 */
+  border-radius: 8px; /* 角を丸める */
+  overflow-y: auto; /* 縦方向のスクロールを許可 */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px;
-}
+  max-height: 80%; /* コンテンツの最大高さを設定 */
+  }
+  
+  
 
 .row {
   display: flex;
@@ -84,9 +92,12 @@ h1 {
 }
 
 .one-post img {
-  width: 100%;
-  height: auto;
-  border-radius: 3px;
+  max-width: 100%; /* 親要素の幅を超えない */
+  height: auto; /* アスペクト比を維持 */
+  display: block; /* ブロック要素として扱う */
+  margin: 0 auto; /* 画像を中央寄せ */
+  border-radius: 8px; /* 必要に応じて角を丸める */
+  object-fit: contain; /* コンテンツを枠内に収める */
   transition: transform 0.3s ease;
 }
 
@@ -226,6 +237,14 @@ img {
   border-radius: 8px;
   }
 
+.d-block img {
+  max-width: 100%; /* 親要素の幅に合わせて縮小 */
+  height: auto; /* アスペクト比を維持 */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain; /* 画像全体を表示 */
+  }
+
 .index-left {
     margin-left: 2.5rem!important;
   }
@@ -252,8 +271,81 @@ img {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .one-post {
-    width: 90%;
-  }
+
+/* コメントフォーム */
+.comment-form {
+  margin: 20px 0;
 }
+
+.comment-form textarea {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.comment-form input[type="submit"] {
+  display: inline-block;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.comment-form input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* コメントリスト */
+.comments {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.comments-index {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.comments-index p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.comments-index .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-delete a {
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-delete a:hover {
+  background-color: #c82333;
+}
+
+

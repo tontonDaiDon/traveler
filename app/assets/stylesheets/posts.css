@@ -71,7 +71,16 @@ h1 {
   
 
 .row {
-  display: flex;
+  display: grid; /* グリッドレイアウトを使用 */
+  grid-template-columns: repeat(3, 1fr); /* 3列 */
+  grid-template-rows: repeat(2, auto); /* 2行 */
+  gap: 20px; /* 要素間の間隔 */
+  justify-content: center; /* 水平方向に中央揃え */
+  align-items: center; /* 垂直方向に中央揃え */
+  width: 100%; /* 全体の幅を設定 */
+  max-width: 1200px; /* レイアウト全体の最大幅を設定 */
+  margin: 0 auto; /* 水平中央揃え */
+  padding: 20px; /* レイアウトの内側余白 */display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;

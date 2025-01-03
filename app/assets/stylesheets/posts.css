@@ -357,4 +357,43 @@ img {
   background-color: #c82333;
 }
 
+/* ボタン全体のスタイル */
+.favorite_btn {
+  display: inline-flex;      /* アイコンとテキストを横並びにする */
+  align-items: center;       /* 縦方向を中央揃え */
+  padding: 5px 10px;         /* ボタンの内側の余白 */
+  font-size: 16px;           /* 文字サイズ */
+  font-weight: bold;         /* 太字 */
+  color: #333;               /* テキスト色 */
+  background-color: #f9f9f9; /* 背景色 */
+  border: 1px solid #ccc;    /* 枠線 */
+  border-radius: 5px;        /* 角丸 */
+  text-decoration: none;     /* リンクの下線を消す */
+  transition: all 0.3s;      /* ホバー時のアニメーション */
+  cursor: pointer;           /* ホバー時にポインタ表示 */
+}
+
+/* ホバー時のスタイル */
+.favorite_btn:hover {
+  background-color: #e0e0e0; /* ホバー時の背景色 */
+  border-color: #aaa;        /* 枠線色を濃くする */
+}
+
+/* アイコン（ハート）のスタイル */
+.favorite_btn::before {
+  content: attr(data-icon);  /* ハートアイコンを挿入 */
+  margin-right: 5px;         /* アイコンとテキストの間に余白 */
+}
+
+/* 「いいね済み」のボタンスタイル */
+.favorite_btn.favorited {
+  color: #fff;               /* テキスト色を白に */
+  background-color: #ff5e5e; /* 背景色を赤に */
+  border-color: #ff5e5e;     /* 枠線も赤に */
+}
+
+.favorite_btn.favorited:hover {
+  background-color: #e04646; /* ホバー時の色 */
+  border-color: #e04646;
+}
 

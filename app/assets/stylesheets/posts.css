@@ -22,8 +22,6 @@ h1 {
 .cover-new,
 .cover-show,
 .cover-edit {
-  height: 100%;
-  width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   background-size: cover;
@@ -43,7 +41,7 @@ h1 {
   background-image: url(/assets/show-scaled.jpg);
   background-size: cover;
   background-position: center,
-}
+  }
 
 .cover-edit {
   background-image: url(/assets/edit-scaled.jpg);
@@ -61,16 +59,13 @@ h1 {
 
 .cover-show .container {
   
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  color: #0f0f0f; 
+  display: flex; /* Flexboxを有効化 */
   border-radius: 8px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-height: 80%;
+  flex-direction: row; /* 水平方向に並べる */
+  align-items: flex-start; /* 子要素を垂直方向の開始位置に揃える */
+  flex-direction: column; /* 縦方向に並べる */
+  justify-content: space-between; /* 上下に要素を分散配置 */
   }
 
 .row {
@@ -97,6 +92,12 @@ h1 {
      /* 内容のオーバーフローを隠す */
   padding: 10px;
     /* 内側余白 */
+  
+}
+
+.caption {
+  color: #0f0f0f;
+  font-size: 20px;
 }
 
 .one-post img {
@@ -131,6 +132,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
+  color: #000;
 }
 
 .form-control {
@@ -243,6 +245,7 @@ img {
   margin: 0 auto; /* 横方向の中央寄せ */
   padding: 1rem;
   border-radius: 8px;
+  color: #000;
   }
 
 .d-block img {
@@ -283,6 +286,7 @@ img {
 /* コメントフォーム */
 .comment-form {
   margin: 20px 0;
+  white-space: pre-wrap; /* 改行を有効にする */
 }
 
 .comment-form textarea {

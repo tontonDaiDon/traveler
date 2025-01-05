@@ -8,11 +8,13 @@ h1 {
 .cover-index {
   height: 140%;
   width: 100%;
-  background-image: url('/assets/index-scaled.jpg');
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url(/assets/index-scaled.jpg);
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   background-size: 100% 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -28,21 +30,23 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .cover-new {
-  background-image: url('/assets/new-scaled.jpg');
+  background-image: url(/assets/new-scaled.jpg);
   background-position: center;
 }
 
 .cover-show {
-  background-image: url('/assets/show-scaled.jpg');
+  background-image: url(/assets/show-scaled.jpg);
   background-size: cover;
   background-position: center,
 }
 
 .cover-edit {
-  background-image: url('/assets/edit-scaled.jpg');
+  background-image: url(/assets/edit-scaled.jpg);
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 8px;
@@ -56,34 +60,29 @@ h1 {
 }
 
 .cover-show .container {
-  max-width: 80%; /* コンテンツの最大幅を設定 */
-  margin: 0 auto; /* 横方向の中央寄せ */
+  
+  max-width: 80%;
+  margin: 0 auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* 背景色と透明度を設定 */
-  border-radius: 8px; /* 角を丸める */
-  overflow-y: auto; /* 縦方向のスクロールを許可 */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-height: 80%; /* コンテンツの最大高さを設定 */
+  max-height: 80%;
   }
-  
-  
 
 .row {
   display: grid; /* グリッドレイアウトを使用 */
   grid-template-columns: repeat(3, 1fr); /* 3列 */
   grid-template-rows: repeat(2, auto); /* 2行 */
-  gap: 20px; /* 要素間の間隔 */
-  justify-content: center; /* 水平方向に中央揃え */
+  gap: 20px; /* 各投稿間のスペース */
+  justify-items: center; /* 投稿を中央揃え */
   align-items: center; /* 垂直方向に中央揃え */
   width: 100%; /* 全体の幅を設定 */
-  max-width: 1200px; /* レイアウト全体の最大幅を設定 */
-  margin: 0 auto; /* 水平中央揃え */
-  padding: 20px; /* レイアウトの内側余白 */display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
   margin-top: 30px;
 }
 

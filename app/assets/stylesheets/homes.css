@@ -24,13 +24,8 @@
   .text-center {
     display: table-cell;
     vertical-align: middle;
+    text-align: center;
   }
-
-
-/* 中央テキストのスタイリング */
-.text-center {
-  text-align: center;
-}
 
 /* サブタイトル */
 .sub-title {

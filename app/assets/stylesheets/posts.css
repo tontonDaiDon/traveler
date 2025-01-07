@@ -39,9 +39,8 @@ h1 {
 
 .cover-show {
   background-image: url(/assets/show-scaled.jpg);
-  background-size: cover;
   background-position: center,
-  }
+}
 
 .cover-edit {
   background-image: url(/assets/edit-scaled.jpg);
@@ -58,7 +57,6 @@ h1 {
 }
 
 .cover-show .container {
-  
   color: #0f0f0f; 
   display: flex; /* Flexboxを有効化 */
   border-radius: 8px;
@@ -68,18 +66,18 @@ h1 {
   justify-content: space-between; /* 上下に要素を分散配置 */
   }
 
-.row {
-  display: grid; /* グリッドレイアウトを使用 */
-  grid-template-columns: repeat(3, 1fr); /* 3列 */
-  grid-template-rows: repeat(2, auto); /* 2行 */
-  gap: 20px; /* 各投稿間のスペース */
-  justify-items: center; /* 投稿を中央揃え */
-  align-items: center; /* 垂直方向に中央揃え */
-  width: 100%; /* 全体の幅を設定 */
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-}
+  .row {
+    display: grid; /* グリッドレイアウトを使用 */
+    grid-template-columns: repeat(3, 1fr); /* 3列 */
+    grid-template-rows: repeat(2, auto); /* 2行 */
+    gap: 20px; /* 各投稿間のスペース */
+    justify-items: center; /* 投稿を中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    width: 100%; /* 全体の幅を設定 */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
 
 .one-post {
   width: 300px;
@@ -91,8 +89,7 @@ h1 {
   overflow: hidden;
      /* 内容のオーバーフローを隠す */
   padding: 10px;
-    /* 内側余白 */
-  
+    /* 内側余白 */ 
 }
 
 .caption {

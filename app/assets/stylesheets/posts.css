@@ -257,15 +257,15 @@ img {
     margin-left: 2.5rem!important;
   }
 
-.page a,
-.next a,
-.last a,
-.first a,
-.prev a {
-  color: black;
-  margin-left: 10px;
-  margin-right: 10px;
-}
+  .page a,
+  .next a,
+  .last a,
+  .first a,
+  .prev a {
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
 .page a:hover,
 .next a:hover,

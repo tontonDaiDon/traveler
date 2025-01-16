@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def follows
     user = User.find(params[:id])
-    @users = user.following_user/page(params[:page]).per(3).reverse_order
+    @users = user.following_user.page(params[:page]).per(3).reverse_order
   end
 
   def followers

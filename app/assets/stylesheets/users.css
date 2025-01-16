@@ -145,3 +145,39 @@ h1 {
   color: #fff;
   border-color: #007bff;
 }
+
+/* カスタムフォローボタンのスタイル */
+.custom-follow-btn {
+  display: flex;
+  justify-content: flex-end; /* ボタンを右寄せ */
+  margin-top: 10px; /* 上に余白をつける */
+}
+
+.custom-follow-btn .btn-danger {
+  background-color: #e74c3c; /* 赤色 */
+  color: white; /* テキストを白に */
+  border: none; /* ボーダーなし */
+  padding: 10px 20px; /* パディング */
+  border-radius: 5px; /* 角丸 */
+  cursor: pointer; /* ポインタ表示 */
+  text-decoration: none; /* アンダーラインを消す */
+}
+
+.custom-follow-btn .btn-success {
+  background-color: #2ecc71; /* 緑色 */
+  color: white; /* テキストを白に */
+  border: none; /* ボーダーなし */
+  padding: 10px 20px; /* パディング */
+  border-radius: 5px; /* 角丸 */
+  cursor: pointer; /* ポインタ表示 */
+  text-decoration: none; /* アンダーラインを消す */
+}
+
+/* ボタンにホバー効果を追加 */
+.custom-follow-btn .btn-danger:hover {
+  background-color: #c0392b; /* 濃い赤 */
+}
+
+.custom-follow-btn .btn-success:hover {
+  background-color: #27ae60; /* 濃い緑 */
+}

@@ -1,23 +1,23 @@
 .cover-user-show {
-  height: 130%;
+  height: 140%;
   width: 100%;
   background-image: url(/assets/mypage-scaled.jpg);
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .cover-user-index {
-  height: 130%;
+  height: 140%;
   width: 100%;
   background-image: url(/assets/users-scaled.jpg);
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .cover-user-edit {
-  height: 110%;
+  height: 100%;
   width: 100%;
   background-image: url(/assets/mypage_edit-scaled.jpg);
   background-color: rgba(255, 255, 255, 0.4);
@@ -42,7 +42,7 @@ h1 {
 /* 各投稿のスタイル */
 .one-post {
   width: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }
 

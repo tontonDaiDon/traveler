@@ -1,14 +1,15 @@
 .cover-user-show {
-  height: 140%;
+  height: 100%;
   width: 100%;
   background-image: url(/assets/mypage-scaled.jpg);
   background-color: rgba(255, 255, 255, 0.4);
+  background-position: center;
   background-blend-mode: lighten;
   background-size: cover;
 }
 
 .cover-user-index {
-  height: 130%;
+  height: 100%;
   width: 100%;
   background-image: url(/assets/users-scaled.jpg);
   background-color: rgba(255, 255, 255, 0.4);
@@ -22,7 +23,7 @@
   background-image: url(/assets/mypage_edit-scaled.jpg);
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .profile {

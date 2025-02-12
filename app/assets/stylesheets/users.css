@@ -182,3 +182,79 @@ h1 {
 .custom-follow-btn .btn-success:hover {
   background-color: #27ae60; /* 濃い緑 */
 }
+
+/* 全体のレイアウト */
+.container {
+  width: 60%; /* 幅を狭めて中央寄りに配置 */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* メッセージ表示領域 */
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0; /* 上下に余白を追加 */
+  align-items: center; /* メッセージを中央寄せ */
+}
+
+/* 吹き出しの基本スタイル */
+.message {
+  max-width: 80%; /* 吹き出しの幅をやや広げる */
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  position: relative;
+}
+
+/* 自分のメッセージ（右側） */
+.message.my-message {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  color: #000;
+}
+
+/* 相手のメッセージ（左側） */
+.message.other-message {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+/* 吹き出しの三角形 */
+.message.my-message::after,
+.message.other-message::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* 自分のメッセージの三角形 */
+.message.my-message::after {
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #dcf8c6;
+  right: -10px;
+  top: 10px;
+}
+
+/* 相手のメッセージの三角形 */
+.message.other-message::after {
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f1f1f1 transparent transparent;
+  left: -10px;
+  top: 10px;
+}
+
+.btn-success {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #25d366;
+  color: #fff;
+  cursor: pointer;
+}

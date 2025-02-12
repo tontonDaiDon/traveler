@@ -1,13 +1,12 @@
 <div class="cover-user-show">
   <div class="container d-flex flex-column align-items-center">
-    <div class="row mt-5">
+      <div class="row mt-5">
       <% if user_signed_in? && @user == current_user %>
         <h1 class="font-weight-normal">マイページ</h1>
       <% else %>
         <h1 class="font-weight-normal"><%= @user.name %>さんのページ</h1>
       <% end %>
     </div>
-    
     <% if user_signed_in? && @user == current_user %>
     <p class="d-flex align-self-end">
       <%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success" %>
@@ -23,7 +22,7 @@
           <%= link_to 'フォローする', user_relationships_path(@user.id), data: { turbo_method: :post }, class:"btn btn-success" %>
         </p>
       <% end %>
-    <% end %> 
+    <% end %>  
     <div class="d-flex w-100">
       <%= attachment_image_tag @user, :profile_image, size: '100x100', fallback: "no_image.svg", class: "mb-3 profile-img" %>
       <h4 class="ml-3 mb-3 card w-100 profile"><%= @user.profile %></h4>
@@ -50,17 +49,17 @@
     <%= paginate @posts %>
   </div>
   <% unless @user.id == current_user.id %>
-      <% if (current_user.following? @user) && (@user.following? current_user) %>
-      <% if @is_room == true %>
-        <p class="user-show-room"><a href="/rooms/<%= @room_id %>" class="btn btn-primary btn-sm">チャットを始める</a></p>
-      <% else %>
-        <%= form_for @room do |f| %>
-          <%= fields_for @entry do |e| %>
-            <%= e.hidden_field :user_id, value: @user.id %>
-          <% end %>
-          <%= f.submit "チャットを始める", class:"btn btn-primary btn-sm" %>
+    <% if (current_user.following? @user) && (@user.following? current_user) %>
+    <% if @is_room == true %>
+      <p class="user-show-room"><a href="/rooms/<%= @room_id %>" class="btn btn-primary btn-sm">チャットを始める</a></p>
+    <% else %>
+      <%= form_for @room do |f| %>
+        <%= fields_for @entry do |e| %>
+          <%= e.hidden_field :user_id, value: @user.id %>
         <% end %>
-      <% end %>
+        <%= f.submit "チャットを始める", class:"btn btn-primary btn-sm" %>
       <% end %>
     <% end %>
+    <% end %>
+  <% end %>
 </div>
